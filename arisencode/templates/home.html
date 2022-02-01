@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div class="datadiv">
+    <p>
+      Add Data <a href="{%url 'addprof' %}"><button>add</button></a>
+    </p>
+  </div>
+  <div class="deletediv">
+    <form method="POST" action="{%url 'delete'%}">
+      {% csrf_token %}
+      <input
+        type="text"
+        name="dele"
+        maxlength="100"
+        placeholder="ID to be deleted"
+      />
+      <button>delete</button>
+    </form>
+  </div>
+  <center>
+    {% if all_items %}
+    <table class="tabledata">
+      <tr>
+        <thead>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>ID</th>
+        </thead>
+      </tr>
+      <tr>
+        {% for things in all_items %}
+        <td>{{ things.name }}</td>
+        <td>{{ things.age }}</td>
+        <td>{{ things.gender }}</td>
+        <td>{{ things.id }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>NO DATA</p>
+    {% endif %}
+  </center>
+</div>
+{% endblock %}

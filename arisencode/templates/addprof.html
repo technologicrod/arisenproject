@@ -1,0 +1,29 @@
+<html>
+  {% extends 'base.html' %} {% block content %}
+  <div class="addproftitle"><h1>Add Profile</h1></div>
+  <p>
+    <a href="{%url 'home' %}"><button class="apbutton">Back</button></a>
+  </p>
+  <form method="POST">
+    {% csrf_token %}
+    <p>
+      Name <input type="text" maxlength="100" placeholder="name" name="name" />
+    </p>
+
+    <p>
+      Gender
+      <select name="age" />
+      <option placeholder="Choose gender" selected></option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    </p>
+    <p>
+      Age <input type="text" maxlength="100" placeholder="age" name="age" />
+    </p>
+    <p>
+      <a href="{%url 'home' %}"><button type="submit" class="apbutton">submit</button></a>
+    </p>
+  </form>
+  {% endblock %}
+</html>

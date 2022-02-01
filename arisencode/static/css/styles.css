@@ -1,0 +1,54 @@
+* {
+  background-color: white;
+}
+.maindiv {
+  height: 100px;
+  text-align: center;
+  border: blue solid 2px;
+  background-color: #b1c2de;
+  border-radius: 25px;
+}
+.title {
+  color: #002a6e;
+  background-color: transparent;
+}
+.datadiv button:hover,
+.deletediv button:hover,
+.apbutton:hover {
+  background-color: pink;
+}
+.datadiv button:active,
+.deletediv button:active,
+.apbutton:active {
+  background-color: #d66b8b;
+}
+.tabledata {
+  width: 98%;
+  margin: 10px auto 20px auto;
+  border-collapse: collapse;
+  border: 2px solid #3f4754;
+  letter-spacing: 1px;
+}
+.tabledata th {
+  background-color: #f5b0b0;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid black;
+}
+.tabledata td {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid grey;
+}
+.tabledata tr {
+  background-color: white;
+}
+.tabledata tr:nth-child(even) {
+  background-color: pink;
+}
+.addproftitle {
+  height: 100px;
+  text-align: center;
+}
